@@ -1,0 +1,36 @@
+.signup {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CCC;
+}
+
+.signup h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.signup Form {
+    font-size: 20px;
+}
+
+.form-container {
+    height: min-content;
+    width: 360px;
+    padding: 30px;
+    border-radius: 5%;
+    background: #FFF;
+}
+
+.signup-button {
+    font-size: 20px !important;
+    background-color: #F8A030 !important;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.signup-button:hover{
+    background-color: #FF6600 !important;
+    color: #FFF !important;
+}

@@ -1,0 +1,25 @@
+.empty-fav {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-fav h2{
+  text-align: center;
+  color: #000;
+  margin: auto;
+}
+
+.add-fav-btn {
+    background-color: #F8A030 !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    width: 30%;
+    margin: auto;
+}
+
+.add-fav-btn:hover {
+  background-color: #FF6600 !important;
+  color: #FFF !important;
+}

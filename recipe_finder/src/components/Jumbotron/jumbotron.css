@@ -1,0 +1,32 @@
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jumbotron h1, h2 {
+    color: #FFF;
+    font-weight: lighter;
+}
+
+.jumbotron .search-input {
+    width: 50%;
+    margin-top: 40px;
+}
+
+.jumbotron .search-button {
+    background-color: #F8A030 !important;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.jumbotron .search-button:hover{
+    background-color: #FF6600 !important;
+    color: #FFF !important;
+}

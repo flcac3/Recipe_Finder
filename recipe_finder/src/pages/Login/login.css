@@ -1,0 +1,36 @@
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CCC;
+}
+
+.login h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login Form {
+    font-size: 20px;
+}
+
+.form-container {
+    height: min-content;
+    width: 360px;
+    padding: 30px;
+    border-radius: 5%;
+    background: #FFF;
+}
+
+.login-button {
+    font-size: 20px !important;
+    background-color: #F8A030 !important;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.login-button:hover{
+    background-color: #FF6600 !important;
+    color: #FFF !important;
+}
