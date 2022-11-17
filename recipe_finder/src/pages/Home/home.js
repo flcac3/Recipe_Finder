@@ -20,6 +20,7 @@ function HomePage() {
     <div>
         {/* passing the jumbotron and search bar to home page  */}
         <AppJumbotron/>
+        <Card className='card mt-5' body>Most Popular Recipes</Card>;
         {/* passing the meals property from meals container to home page */}
         <MealsContainer meals={meals}/> 
     </div>

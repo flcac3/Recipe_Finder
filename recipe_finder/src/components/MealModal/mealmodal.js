@@ -67,25 +67,18 @@ function MealModal({title, description, idMeal}) {
     .then((willDelete) => {
       if (willDelete) {
         handleRemoveFromFavorites();
-        swal("Poof! Removed from favorites successfully!", {
+        swal("Removed from favorites successfully", {
           icon: "success",
           buttons: false,
           timer: 2000,
         });
       } 
-      /* else {
-        swal("Your favorite meal is not removed", {
-          icon: "error",
-          buttons: false,
-          timer: 2000,
-        });
-      } */
     });
   }
 
   return (
     <>
-      <Button className='modal-button mb-3' variant="link" size='lg' onClick={handleShow}>View More
+      <Button className='modal-button mb-3' variant="link" size='lg' onClick={handleShow}>View Recipe
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
