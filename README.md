@@ -5,3 +5,7 @@ npm install
 Use    npm start     to run the project
 
 This repo is for ECU SENG 6230-601 Group 2 term project, Recipe Finder. It is a recipe search website
+
+test test test 
+asdfsdf
+dfdff
