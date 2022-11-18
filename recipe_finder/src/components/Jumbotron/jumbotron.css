@@ -1,5 +1,5 @@
 .jumbotron{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./jumbotron.jpg');
+    background-image: linear-gradient(rgba(5, 5, 5, 0.28), rgba(255, 255, 255, 0.156)), url('./Jumbotron.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,8 +11,8 @@
 }
 
 .jumbotron h1, h2 {
-    color: #FFF;
-    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .jumbotron .search-input {
@@ -21,12 +21,12 @@
 }
 
 .jumbotron .search-button {
-    background-color: #F8A030 !important;
+    background-color: #d8d4d4 !important;
     text-decoration: none !important;
     color: #000 !important;
 }
 
 .jumbotron .search-button:hover{
-    background-color: #FF6600 !important;
+    background-color: #d83535 !important;
     color: #FFF !important;
 }

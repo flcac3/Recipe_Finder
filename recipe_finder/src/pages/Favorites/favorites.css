@@ -12,7 +12,7 @@
 }
 
 .add-fav-btn {
-    background-color: #F8A030 !important;
+    background-color: #fadb85 !important;
     text-decoration: none !important;
     color: #000 !important;
     width: 30%;
@@ -20,6 +20,6 @@
 }
 
 .add-fav-btn:hover {
-  background-color: #FF6600 !important;
+  background-color: #d83535 !important;
   color: #FFF !important;
 }
