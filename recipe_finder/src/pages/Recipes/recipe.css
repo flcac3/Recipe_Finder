@@ -22,7 +22,7 @@
     position: relative;
 }
   
-.recipePagePrintButton, h1 {
+.recipe-page .recipePagePrintButton, .recipe-page h1 {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -31,20 +31,16 @@
     transform: translate(-50%, -50%);
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
+.recipe-page .fa {
+    padding: 10px 0;
+    width: 40px;
   }
   
-  .fa:hover {
+.recipe-page .fa:hover {
       opacity: 0.7;
   }
   
-  .fa-facebook {
+.recipe-page .fa-facebook {
     background: #3B5998;
     color: white;
-  }
+}
