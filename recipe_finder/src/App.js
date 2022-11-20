@@ -35,6 +35,7 @@ function App() {
         <AppNavbar/>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/recipe" element={<RecipePage />} />
             {!user && (
               <>
                 <Route path="/login" element={<LoginPage />} />
@@ -44,9 +45,8 @@ function App() {
             {user && (
               <>
                 <Route path="/favorites" element={<FavoritesPage />} />
-                <Route path="/recipe" element={<RecipePage />} />
               </>
-              )}
+             )}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
       </Router>
