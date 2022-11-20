@@ -8,25 +8,25 @@ import NotFoundPage from './pages/NotFound/notfound';
 import LoginPage from './pages/Login/login';
 import SignUpPage from './pages/SignUp/signup';
 import FavoritesPage from './pages/Favorites/favorites';
+import RecipePage from './pages/Recipes/recipe';
 
 function App() {
-  const {user, setUser} = useContext(MyContext);
+  const { user, setUser } = useContext(MyContext);
 
   useEffect(() => {
-  const autoLogin = async() => {
-  const response = await fetch(`${window.env.API_URL}/auto-login`, {
-      method:'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': localStorage.getItem('token'),
-      }
-     });
-  
-    const data = await response.json();
-    setUser(data)
-  }
+    const autoLogin = async() => {
+      const response = await fetch(`${window.env.API_URL}/auto-login`, {
+        method:'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-access-token': localStorage.getItem('token'),
+        }
+      });
+      const data = await response.json();
+      setUser(data);
+    }
 
-  autoLogin()
+   autoLogin()
   
   }, []);
 
@@ -34,15 +34,20 @@ function App() {
       <Router>
         <AppNavbar/>
           <Routes>
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/recipe" element={<RecipePage />} />
             {!user && (
               <>
-                <Route path="/login" element={<LoginPage/>} />
-                <Route path="/signup" element={<SignUpPage/>} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignUpPage />} />
               </>
-            )}
-            {user && <Route path="/favorites" element={<FavoritesPage/>} />}
-            <Route path="*" element={<NotFoundPage/>} />
+             )}
+            {user && (
+              <>
+                <Route path="/favorites" element={<FavoritesPage />} />
+              </>
+             )}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
       </Router>
   );
