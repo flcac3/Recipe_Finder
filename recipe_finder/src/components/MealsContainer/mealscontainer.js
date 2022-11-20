@@ -15,7 +15,7 @@ function MealsContainer({meals})
       </Alert>
       }
       {meals?.map((meal) => ( // map meals and populate the meal properties if meals can be found
-        <MealCard key = {meal.idMeal} {...meal}/>
+        <MealCard key = {meal.idMeal} meal={meal} />
       ))}
     </div>
   );

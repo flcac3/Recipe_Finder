@@ -15,3 +15,13 @@
   justify-content: center;
   display: flex;
 }
+.meal-card .meal-card-button {
+  background-color: #F8A030 !important;
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+.meal-card .meal-card-button:hover {
+  background-color: #FF6600 !important;
+  color: #FFF !important;
+}
