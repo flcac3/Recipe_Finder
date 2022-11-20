@@ -26,7 +26,7 @@ function App() {
       setUser(data);
     }
 
-   // autoLogin()
+   autoLogin()
   
   }, []);
 
@@ -35,16 +35,18 @@ function App() {
         <AppNavbar/>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* {!user && ( */}
+            {!user && (
               <>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/signup" element={<SignUpPage />} />
               </>
-            {/* )} */}
-            {/* {user && ( <> */}
+             )}
+            {user && (
+              <>
                 <Route path="/favorites" element={<FavoritesPage />} />
                 <Route path="/recipe" element={<RecipePage />} />
-              {/* </>)} */}
+              </>
+              )}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
       </Router>
