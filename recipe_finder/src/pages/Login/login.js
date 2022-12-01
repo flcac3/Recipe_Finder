@@ -36,11 +36,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Recipe Finder Login</h1>
+        <h1>Recipe Finder Account</h1>
         <div>
           {loginData ? (
             <div>
-              <h3>You logged in as {loginData.email}</h3>
+              <h3>You are logged in as {loginData.email}</h3>
+              <p>Name: {loginData.name}</p>
               <button onClick={handleLogout}>Logout</button>
             </div>
           ) : (
