@@ -10,43 +10,6 @@ function AppNavbar() {
   const navigate = useNavigate();
   const {user, setUser} = useContext(MyContext);
 
-  // to logout user
-  const handleLogout = () => {
-    fetch('http://localhost:5000/logout', {
-      method:'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': localStorage.getItem('token'),
-      }
-    })
-      localStorage.removeItem("token");
-      setUser(null);
-      navigate('/', {replace: true});
-    };
-
-  // to reconfirm log out when user pressed the logout button
-  function confirmLogout() {
-    swal({
-      title: "Warning",
-      text: "Do you really wish to log out?",
-      icon: "warning",
-      dangerMode: true,
-      buttons: true,
-      closeOnClickOutside: false,
-      closeOnEsc: false,
-    })
-    .then((Logout) => {
-      if (Logout) {
-        handleLogout();
-        swal("Logged out successfully!", {
-          icon: "success",
-          buttons: false,
-          timer: 2000,
-        });
-      } 
-    });
-  }
-
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" fixed="top">
       <Container>
@@ -73,18 +36,14 @@ function AppNavbar() {
               <LinkContainer to="/login">
                 <Nav.Link>Login</Nav.Link>
               </LinkContainer>{" "}
-              <LinkContainer to="/signup">
-                <Nav.Link>Sign Up</Nav.Link>
-              </LinkContainer>
             </>
           )}
           {user && ( // if user is logged in, display these navbar link buttons
             <>
-              <LinkContainer to="/favorites">
-                <Nav.Link>Favorites</Nav.Link>
-              </LinkContainer>{" "}
-              <Nav.Link onClick={confirmLogout}>Logout</Nav.Link>
-            </>
+            <LinkContainer to="/login">
+              <Nav.Link>Logout</Nav.Link>
+            </LinkContainer>{" "}
+          </>
           )}
             </Nav>
         </Navbar.Collapse>
