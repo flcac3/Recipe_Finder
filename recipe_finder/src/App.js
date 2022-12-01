@@ -6,9 +6,12 @@ import AppNavbar from "./components/Navbar/navbar";
 import HomePage from './pages/Home/home';
 import NotFoundPage from './pages/NotFound/notfound';
 import LoginPage from './pages/Login/login';
-import SignUpPage from './pages/SignUp/signup';
 import FavoritesPage from './pages/Favorites/favorites';
 import RecipePage from './pages/Recipes/recipe';
+/*App.js*/
+
+import { GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script';
 
 function App() {
   const { user, setUser } = useContext(MyContext);
@@ -39,7 +42,6 @@ function App() {
             {!user && (
               <>
                 <Route path="/login" element={<LoginPage />} />
-                <Route path="/signup" element={<SignUpPage />} />
               </>
              )}
             {user && (
