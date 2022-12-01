@@ -34,9 +34,14 @@ function AppNavbar() {
           {!user && ( // if user is not logged in, display these navbar link buttons
             <>
               <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
+                <Nav.Link>Account</Nav.Link>
+              </LinkContainer>{" "}
+              <></>
+              <LinkContainer to="/favorites">
+                <Nav.Link>Favorites</Nav.Link>
               </LinkContainer>{" "}
             </>
+            
           )}
           {user && ( // if user is logged in, display these navbar link buttons
             <>
